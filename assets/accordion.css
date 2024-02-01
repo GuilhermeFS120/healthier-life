@@ -1,0 +1,65 @@
+:root {
+    --arrow-size: 2rem;
+}
+
+div.c {
+    position: relative;
+}
+
+input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.c h1 {
+    background: #4080bf;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+label::before {
+    content: '';
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    background: white;
+    height: var(--arrow-size);
+    width: var(--arrow-size);
+    transition: all 0.5s;
+}
+
+div.p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+div.p p {
+    color: #000;
+
+    padding: 1rem;
+}
+
+input:checked ~ h1 label::before {
+    transform: rotateZ(90deg);
+}
+
+input:checked ~ h1 ~ div.p {
+    max-height: 6.25rem;
+}

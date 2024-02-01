@@ -1,0 +1,197 @@
+@import 'https://fonts.googleapis.com/css2?family=DM+Sans&family=Luxurious+Script&family=Orbitron&family=Poppins&family=Quicksand&family=Raleway&family=Roboto&display=swap';
+@import 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css';
+:root {
+  --main-bg: #222;
+  --main-color: #fff;
+  --alt-bg: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 93.75%;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+  outline: none;
+}
+
+.headline {
+  padding: 0.5rem;
+  font-size: 2rem;
+  text-shadow: 0 4px 4px #000;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.sub-headline {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 100;
+  text-shadow: 0 0 4px #000;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+body {
+  background: var(--main-bg);
+}
+body::nth-child(2) {
+  background: var(--alt-bg);
+}
+
+section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+section.main-copy {
+  color: white;
+  background: url("../images/main-copy-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.target-people {
+  color: white;
+  background: url("../images/bg-1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.cta {
+  text-shadow: none;
+  width: 80%;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  background: #0097B2;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.testimonials {
+  margin: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.testimonials .testimonial {
+  width: 90%;
+  height: 18rem;
+}
+.testimonials .testimonial img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+ul {
+  margin-top: 1rem;
+  padding: 0 2rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+ul li {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.bonus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.bonus .product {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.bonus .product h3, .bonus .product p, .bonus .product span {
+  color: #222;
+}
+.bonus .product h3 {
+  font-size: 1.5rem;
+}
+.bonus .product .full-price {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.bonus .product .full-price span {
+  text-decoration: line-through;
+}
+.bonus .product .new-price {
+  font-size: 1.2rem;
+}
+.bonus .product .new-price span {
+  font-weight: 600;
+}
+
+.final-offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.final-offer .main {
+  max-width: 20rem;
+}
+.final-offer .main img {
+  width: 100%;
+}
+.final-offer .outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.final-offer .outer ul {
+  font-size: 1.3rem;
+}
+.final-offer .outer .price .previous-price {
+  font-size: 1.1rem;
+}
+.final-offer .outer .price .previous-price span {
+  text-decoration: line-through;
+}
+.final-offer .outer .price .final-price {
+  font-size: 2rem;
+}
+.final-offer .outer .price .final-price span {
+  font-weight: 600;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+  .cta {
+    width: 30rem;
+  }
+  .testimonials {
+    flex-direction: row;
+  }
+  .bonus {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */
